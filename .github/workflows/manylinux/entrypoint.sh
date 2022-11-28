@@ -39,8 +39,8 @@ if [ `uname -m` == 'aarch64' ]; then
  PIP_COMMAND="$PY_VERSION -m pip install --no-cache-dir -q"
  PYTHON_COMMAND="$PY_VERSION"
 else
- declare -A python_map=( ["3.6"]="cp36-cp36m" ["3.7"]="cp37-cp37m" ["3.8"]="cp38-cp38" ["3.9"]="cp39-cp39")
- declare -A python_include=( ["3.6"]="3.6m" ["3.7"]="3.7m" ["3.8"]="3.8" ["3.9"]="3.9")
+ declare -A python_map=( ["3.6"]="cp36-cp36m" ["3.7"]="cp37-cp37m" ["3.8"]="cp38-cp38" ["3.9"]="cp39-cp39" ["3.9-nogil"]="nogil39-nogil_39b_x86_64_linux_gnu")
+ declare -A python_include=( ["3.6"]="3.6m" ["3.7"]="3.7m" ["3.8"]="3.8" ["3.9"]="3.9" ["3.9-nogil"]="3.9")
  PY_VER=${python_map[$PY_VERSION]}
  PIP_COMMAND="/opt/python/${PY_VER}/bin/pip install --no-cache-dir -q"
  PYTHON_COMMAND="/opt/python/"${PY_VER}"/bin/python"
